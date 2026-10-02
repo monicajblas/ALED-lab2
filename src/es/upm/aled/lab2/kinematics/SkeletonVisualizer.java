@@ -15,7 +15,7 @@ import es.upm.aled.lab2.utils.FileUtils;
  * 
  * @author rgarciacarmona
  */
-public class SkeletonVisualizer {
+public class SkeletonVisualizer{
 
 	/**
 	 * Creates a sample exoskeleton with 10 Segments and animates it. The path were

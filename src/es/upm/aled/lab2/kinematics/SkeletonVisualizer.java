@@ -31,7 +31,7 @@ public class SkeletonVisualizer{
 	public static void main(String[] args) {
 		// Kinematic chain definition
 		// Hip (root)
-		Segment hip = new Segment(0, Math.toRadians(0));
+		Segment hip = new Segment(0, Math.toRadians(0)); //empieza en la cadera
 		// Torso
 		Segment torso = new Segment(120, Math.toRadians(-90)); // Upwards, in screen coordinates, Y is down
 		hip.addChild(torso);
@@ -47,6 +47,19 @@ public class SkeletonVisualizer{
 		Segment rightForearm = new Segment(70, Math.toRadians(20));
 		leftUpperArm.addChild(leftForearm);
 		rightUpperArm.addChild(rightForearm);
+		//Hands
+		Segment finger1rightHand = new Segment(10, Math.toRadians(40));
+		Segment finger2rightHand = new Segment(10, Math.toRadians(5));
+		Segment finger3rightHand = new Segment(10, Math.toRadians(-40));
+		Segment finger1leftHand = new Segment(10, Math.toRadians(40));
+		Segment finger2leftHand = new Segment(10, Math.toRadians(5));
+		Segment finger3leftHand = new Segment(10, Math.toRadians(-40));
+		leftForearm.addChild(finger1leftHand);
+		leftForearm.addChild(finger2leftHand);
+		leftForearm.addChild(finger3leftHand);
+		rightForearm.addChild(finger1rightHand);
+		rightForearm.addChild(finger2rightHand);
+		rightForearm.addChild(finger3rightHand);
 		// Legs
 		Segment leftThigh = new Segment(100, Math.toRadians(120));
 		Segment rightThigh = new Segment(100, Math.toRadians(60));

@@ -3,7 +3,6 @@ package es.upm.aled.lab2.kinematics;
 import java.util.ArrayList;
 import java.util.List;
 
-// TODO: Implemente la clase
 public class Segment {
 
 	private double length; 
@@ -11,10 +10,10 @@ public class Segment {
 	private List<Segment> children = new ArrayList<Segment>(); 
 	
 	/**
-	 * Builds a new Segment from its lenght and angle measurements
+	 * Construye un nuevo Segment a partir de su longitud y su ángulo
 	 * 
-	 * @param lenght
-	 * @param angle
+	 * @param lenght of the Segment
+	 * @param angle que forma Segment con su padre 
 	 */
 	public Segment(double lenght, double angle) {
 		this.length = lenght;
@@ -22,7 +21,7 @@ public class Segment {
 	}
 	
 	/**
-	 * Returns the lenght of the segment
+	 * Devuelve la longitud del segmento 
 	 * 
 	 * @return length of the Segment 
 	 */
@@ -31,19 +30,19 @@ public class Segment {
 	}
 	
 	/**
-	 * Returns the angle in radians formed by the segment and its parent 
-	 * (the segment to which it i connected) 
+	 * Devuelve el ángulo en radianes que forma el Segment y su padre 
+	 * (el Segment al que está conectado)
 	 * 
-	 * @return angle between Segment and it previous conecction
+	 * @return angle entre Segment y su conexión previa
 	 */
 	public double getAngle() {
 		return angle;
 	}
 	
 	/**
-	 * Modifies the angle of the segment
+	 * Modifica el atributo ángulo 
 	 * 
-	 * @param angle
+	 * @param angle 
 	 */
 	public void setAngle(double angle) {
 		this.angle = angle;
